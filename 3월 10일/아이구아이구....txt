@@ -1,0 +1,16 @@
+
+
+1. https://fontawesome.com/
+
+2. calc : 보고 있는 영상의 사이즈를 스스로 계산
+
+3. object-fit: cover; 부모요소를 기준으로 영상이 꽉 차게 만들어라
+
+4. letter-spacing 자간 간격
+
+5. flex
+
+-왼쪽에서 오른쪽 값이 기본
+
+6. 다음주 html css jquary / 월요일에 지난주 내용 코.테 / 다음주 프레임웤 피그마
+
