@@ -1,0 +1,270 @@
+
+
+1. 트랜지션 어쩌고
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예제1</title>
+  <style>
+    #graph {
+      border: 3px solid black;
+      width: 710px;
+    }
+    .bar {
+      width: 20px; height: 50px;
+      background-color: orange;
+      margin: 5px;
+      
+      transition: width 5s;
+    }
+
+    #graph:hover .bar {
+      width: 700px;
+    }
+    .bar:nth-child(1) {
+      transition-delay: 0;
+      transition-timing-function: linear;
+      width: 100px;
+      background-color: red;
+    }
+    .bar:nth-child(2) {
+      transition-delay: 0;
+      transition-timing-function: ease;
+      width: 300px;
+      background-color: blue;
+    }
+    .bar:nth-child(3) {
+      transition-delay: 0;
+      transition-timing-function: ease-in;
+      width: 400px;
+      background-color: green;
+    }
+    .bar:nth-child(4) {
+      transition-delay: 0;
+      transition-timing-function: ease-in-out;
+      width: 200px;
+      background-color: yellow;
+    }
+    .bar:nth-child(5) {
+      transition-delay: 0;
+      transition-timing-function: ease-out;
+      width: 400px;
+      background-color: pink;
+    }
+      /* cubic-bezier */
+
+  </style>
+</head>
+<body>
+  <h1>CSS3 Transition</h1>
+  <div id="graph">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>
+
+
+2. 원이 데굴데굴
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0;
+    }
+    body {
+      position: relative;
+    }
+    #box {
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 100px;
+      text-align: center;
+      line-height: 200px;
+      background-color: linear-gradient(#cb60b3 0%, #db36a4 100%);
+
+      /* animation-name: rint;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      -o-animation-direction: alternate;
+      animation-timing-function: linear; */
+
+      animation: rint 2s linear none infinite alternate;
+    }
+    #box:hover {
+      animation-play-state: paused;
+    }
+      @keyframes rint {
+        from{
+          left: 0;
+          transform: rotate(0deg);
+      }
+       50%{
+          left:500px
+      }
+        to{
+      left: 500px;
+      transform: rotate(360deg)
+    }
+      }
+        
+  </style>
+</head>
+<body>
+  <div id="box">
+    <h1>Rotation</h1>
+  </div>
+</body>
+</html>
+
+
+3. 
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section {
+      width: 300px; height: 300px;
+      border: 5px solid black;
+
+      margin: 200px;
+    }
+
+    div {
+      width: 300px; height: 300px;
+      background-color: red;
+    /* 트랜폼 로테이트 값 양수 시계방향으로, 정가운데를 기준으로*/
+    /* 아래에 있는 트랜스폼, 서술 순서에 따라 최종결과값 달라짐 */
+      transform: rotate(60deg);
+      transform-origin: 0 80%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>
+
+    </div>
+  </section>
+</body>
+</html>
+
+
+4. 예쁜 상자
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>
+
+==
+
+*{
+  margin: 0; padding: 0;
+}
+body {
+box-sizing: border-box;  
+  width: 200px;
+  margin: 200px auto;
+  -webkit-perspective: 2000;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+section {
+  width: 200px; height: 200px;
+  position: relative;
+  animation: rint 3s ease-in-out 0s infinite;
+
+  transform-style: preserve-3d;
+}
+@keyframes rint {
+  from{
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to{
+    transform: rotateX(360deg) rotateY(360deg) rotatez(360deg);
+  }
+}
+
+div{
+  position: absolute;
+  left: 0px; top: 0; 
+
+  width: 200px; height: 200px;
+  backface-visibility: none;
+  opacity: 0.2;
+}
+
+
+
+/* Left Side */
+div:nth-child(1) {
+  transform: rotateY(0deg) translate3d(0, 0, 100px);
+  background-color: red;
+}
+div:nth-child(2) {
+  transform: rotateY(90deg) translate3d(0, 0, 100px);
+  background-color: green;
+}
+div:nth-child(3) {
+  transform: rotateY(180deg) translate3d(0, 0, 100px);
+  background-color: blue;
+}
+div:nth-child(4) {
+  transform: rotateY(270deg) translate3d(0, 0, 100px);
+  background-color: yellow;
+}
+
+/* Cover Side */
+div:nth-child(5) {
+  transform: rotateX(90deg) translate3d(0, 0, 100px);
+  background-color: brown;
+}
+div:nth-child(6) {
+  transform: rotateX(270deg) translate3d(0, 0, 100px);
+  background-color: pink;
+}
+
+
+5. 회전목마
+
+6. https://gs.statcounter.com/
+
