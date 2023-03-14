@@ -1,0 +1,789 @@
+
+1. 지원서 만들기
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="박스">
+  <H1>프런트엔드 개발자 지원서</H1>
+  <p><mark><b>HTML, CSS3, Javascript</b></mark>에 대한 기술적 이해와 경험이 있는 분을 찾습니다</p>
+  <hr />
+  <form action="">
+  <h3>개인정보</h3>
+  <ul>
+    <li>
+      <label for="name" class="info"> 이름:</label>
+      <input type="text" id="name" placeholder="공백없이 입력하세요" autofocus></li>
+    <li><label for="number" class="info"> 연락처:</label>
+      <input type="text" id="numver"</li>
+    </ul>
+    <b>지원분야</b>
+  <ul>
+    <li>
+    <input type="radio" name="field" id="publishing"
+    <label for="publishing">웹 퍼블리싱</label>
+  </li>
+  <li>
+    <input type="radio" name="field" id="publishing"
+    <label for="application">웹 어플리케이션 개발</label>
+    <li>
+      <input type="radio" name="field" id="publishing"
+      <label for="application">개발 환경 개선</label>
+    </li>
+  </li>
+</ul>
+  <h3>지원동기</h3>
+  <ul>
+  <li><textarea id="지원동기" name="지원동기" rows="18" cols="100" placeholder="본사 지원 동기를 간략히 작성해주세요"></textarea></li>
+</ul>
+<div class="buttons">
+<input type="submit" value="제출하기">
+<input type="reset" value="다시작성">
+</form>
+</div>
+</body>
+</html>
+
+====
+
+/* 초기값 */
+*{
+  margin: 0; padding: 0;
+}
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* 본문스타일 */
+
+#박스{
+  width: 900px;
+  height: 900px;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  
+  margin: 20px auto;
+  padding: 15px 40px;
+}
+
+form {
+  margin-left: 45px;
+}
+
+/* 메뉴 타이틀 스타일 */
+h1, p, hr{
+  text-align: center;
+  margin-top: 25px;
+}
+
+mark {
+font-size:1.2em;
+}
+
+/* 메뉴 본문 스타일 */
+
+h3{
+  margin-top: 38px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li{
+  padding-left: 50px;
+}
+
+label.info{
+  width: 62px;
+}
+
+label, input{
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 8px;
+  margin-bottom: 14px;
+}
+
+/* 버튼 스타일 */
+
+.buttons{
+text-align: center;
+}
+
+.buttons > input{
+  width: 180px;
+  height: 35px;
+  margin: 10px;
+
+  border: 0;
+  box-shadow: 1px 1px 2px gainsboro;
+}
+
+
+2. 
+
+url: 절대경로, 상대경로
+
+상대경로 : ./ or ../(상위폴더)
+절대경로 : /폴더>css파일
+
+
+3. 오늘 수업 ppt : 109p
+
+4. text 
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="button">
+      <a href="#" class="font">click</a>
+      <a href="#" class="font">click</a>
+    </div>
+</body>
+</html>a
+
+==
+
+a{
+  text-decoration: none;
+  text-decoration: black;
+  display: block;
+}
+
+.button{
+  background-color: orange;
+  width: 150px; height: 70px;
+
+  border: 10px solid #fff;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px #a9a9a9;
+  font-size: 2em;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+}
+
+5. 상대위치좌표 (앱솔루트 렐러티브)
+
+상대위치 : stafic / relative
+절대위치 : absolute / fixed
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Lorem ipsum dolor</h1>
+  <div>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+  </div>
+  <h1>Lorem ipsum dolor</h1>
+</body>
+</html>
+
+==
+
+.box {
+  width: 100px; height: 100px;
+  position: absolute;
+}
+
+.red {
+  background-color: red;
+  left: 10px; top: 10px;
+  z-index: 3;
+}
+.green {
+  background-color: green;
+  left: 50px; top: 50px;
+  z-index: 2;
+}
+.blue {
+  background-color: blue;
+  left: 90px; top: 90px;
+  z-index: 1;
+}
+
+body > div{
+  width: 400px; height: 100px;
+  border: 3px solid black;
+
+  position: relative;
+  overflow: hidden;
+}
+
+>>앱솔루트값 썼을 때는 렐러티브도 같이
+
+*
+https://blog.naver.com/416homin/223024339387
+
+6. 
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="a">a영역
+    <div id="b">b영역</div>
+    <div id="c">c영역</div>
+
+  </div>
+
+  
+
+</body>
+</html>
+
+==
+
+div{
+  width: 100px; height: 100px;
+}
+
+#a{
+  width: 300px; height: 300px;
+  background-color:  blue;
+  position: relative;
+  top: 100px; left: 100px;
+}
+
+#b{
+  background-color: red;
+  position: absolute;
+  top: 0; left: 100px;
+}
+
+#c{
+  background-color: green;
+  position: fixed;
+  top: 0; left: 200px;
+}
+
+
+7. float
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+  <h1>Header</h1>
+</header>
+  <nav>
+    <h1>Navigation</h1>
+  </nav>
+  <div id="wrap">
+  <div id="aside">
+    <h1>Aside</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae reprehenderit impedit iusto error quod non explicabo architecto, ullam consequatur. Facere omnis saepe velit quo cum commodi culpa sunt aperiam cumque?</p>
+  </div>
+  <div id="section"></div>
+  <h1>Section</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore soluta sit dignissimos unde esse veritatis aperiam eveniet id omnis doloremque. At placeat quisquam sit vel inventore, voluptate nam vero deserunt?</p>
+</div>
+<footer>
+  <h1>footer</h1>
+</footer>
+</body>
+</html>
+
+==
+
+body {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+#aside{
+  width: 200px;
+  float: left;
+}
+#section{
+  width: 700px;
+  float: left;
+}
+
+8. 그림자
+
+https://css3generator.com/
+
+
+9. 그라데이션
+
+www.colorzilla.com/gradient-editor
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div>
+  <h1>Lorem ipsum dolor sit</h1>
+</div>
+</body>
+</html>
+
+==
+
+div{
+  background: linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 9%,#abd3ee 16%,#abd3ee 20%,#d5ebfb 70%);
+  width:500px; height: 60px; 
+  text-align: center;
+  line-height: 60px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+10. 예제2
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+    <aside>
+      <div id="namecard">
+        <img src="http://place-hold.it/200x288" alt="" />
+      <h1>박혜원</h1>
+        <p>오늘은 남아있는 인생의 첫째날</p>
+      </div>
+      <div id="detail">
+        <h2>Info</h2>
+          <p>서울, 코리아</p>
+          <p>이메일주소</p>
+      </div>
+      <div id="sns">
+        <h2>SNS</h2>
+        <ul>
+          <li><a href="http://www.youtube.com" target="_blank">
+          유튜브</a></li>
+          <li><a href="#" target="_blank"></a>인스타그램</li>
+        </ul>
+      </div>
+    </aside>
+    <div id="main">
+      <section>
+        <h2 class="subtitle">1.Who am I?</h2>
+        <p><mark><strong>프론트엔드 웹 기술 (Front-End Web Tecg.)</strong></mark> 개발자입니다.</p>
+        <p>현재 크몽 및 네이버에서 프리랜서로 활동 중입니다.</p>
+      </section>
+
+      <section>
+        <h2 class="subtitle">2.Experience</h2>
+        <ul>
+          <li><h4><mark><strong>프론트엔드 개발경력</strong></mark></h4>
+            <ul>
+              <li>Vue, Reack 등 SPA 프레임워크 활용 웹페이지 개발</li>
+              <li>Typescript 기반 서비스개발 및 최적화 경험 다수</li>
+              <li>Server Side Rendering 개발 가능</li>
+            </ul>
+          </li>
+          <li><h4><mark><strong>웹 디자인 기획경력</strong></mark></h4>
+            <ul>
+              <li>포토샵 및 일러스트 숙련도 상</li>
+              <li>웹 상세페이지 및 배너 제작 가능</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Skills</h2>
+          <ul>
+            <li>👍Vue, React 등 SPA프레임워크 활용 웹페이지 개발</li>
+            <li>👍Typescript 기반 서비스개발 및 최적화 경험 다수</li>
+            <li>👍Sever Side Rendering 개발 가능</li>
+          </ul>
+      </section>
+      <section>
+        <h2>4.Education</h2>
+        <caption>학력사항</caption>
+          <table>
+            <tr>
+              <th>출신학교</th>
+              <th>전공</th>
+              <th>기간</th>
+              <th>구분</th>
+            <tr>
+                <td>한국대학교</td>
+                <td>컴퓨터공학과</td>
+                <td>2023.3-2028.2</td>
+                <td>졸업</td>
+            </tr>
+            <tr>
+              <td>대한고등학교</td>
+              <td>인문계</td>
+              <td>2020.3-2023.2</td>
+              <td>졸업</td>
+            </tr>
+          </table>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+
+===
+
+/* 초기화 */
+
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 본문 스타일 */
+
+body{
+  background-color: #222;
+  height: 100%;
+}
+#container{
+  width: 900px;
+  position: relative;
+  left: 50%;
+  margin-left: -450px;
+}
+
+/* 측면 사이드 스타일 */
+
+aside{
+  float: left;
+  width:300px; height: 100vh;
+  padding: 20px 50px;
+  background-color: rgb(216, 216, 216);
+}
+
+aside > #namecard > h1 {
+  margin-top: 20px;
+}
+#detail{
+  margin-top: 100px;
+}
+#sns {
+  margin-top: 50px;
+}
+#sns > ul > li{
+  display: inline-block;
+  width: 80px;
+  padding-left: 10px;
+}
+aside p {
+  margin-top: 10px;
+}
+
+/* 본문 스타일 */
+#main {
+  float: left;
+  width: 600px; height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+}
+
+#main > section {
+  width: 500px;
+  margin: 20px 10px;
+  padding: 20px;
+  border-bottom: 1px dotted #222;
+}
+
+section > p, section > ul {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+table, td {
+  text-align: center;
+  border: 1px solid black;
+  margin: 30px;
+}
+
+th{
+  background-color: gray;
+}
+
+caption {
+  text-align: center;
+}
+
+
+(깃헙에 코드 있음)
+
+
+
+11. 모바일웹 예제
+
+https://www.toptal.com/developers/css/sprite-generator
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+  <div id="wrap">
+  <header id="main_header">
+    <a href="http://www.naver.com" class="left" target="_blank"></a>
+    <h1>NAVER</h1>
+    <label for="toggle" class="right"></label>
+  </header>
+  <div id="toggle_gnb_wrap">
+    <div id="toggle_gnb">
+      <ul>
+        <div id="toggle_top">
+          <li><a href="#">메일</a></li>
+          <li><a href="#">카페</a></li>
+          <li><a href="#">웹툰</a></li>
+          <li><a href="#">쇼핑</a></li>
+        </div>
+        <div id="toggle_bottom">
+          <li><a href="#">푸드윈도</a></li>
+          <li><a href="#">키즈윈도</a></li>
+          <li><a href="#">아트윈도</a></li>
+          <li><a href="#">뷰티윈도</a></li>
+        </div>
+      </ul>
+    </div>
+  </div>
+    <nav id="top_gnb">
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+    </nav>
+    <nav id="bottom_gnb">
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+      <div><a href="#">버튼</a></div>
+    </nav>
+    <section id="main_section">
+      <header id="section_header">
+        <h1>Lorem ipsum</h1>
+        <time>2023-03-06</time>
+
+      </header>
+      <article id="section_article">
+        <p>, dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit., dolor sit amet consectetur adipisicing elit. Velit tempora modi praesentium officiis accusamus dolore amet, molestias doloremque fugiat tenetur cum pariatur ipsam facilis, consequatur ad excepturi expedita, saepe suscipit.</p>
+      </article>
+    </section>
+    <footer id="main_footer">
+      <h3>HTML5+CSS3 BASIC</h3>
+      <address>웹사이트 레이아웃 베이직</address>
+    </footer>
+  </div>
+  </div>
+</body>
+</html>
+
+
+===
+
+
+/* 초기화 */
+* {
+  margin: 0; padding: 0;
+}
+body{
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* 상단 토글박스 버튼 */
+#main_header {
+  height: 45px;
+  background: url('./img/header_background.png');
+
+  text-align: center;
+  line-height: 45px;
+  position: relative;
+}
+#main_header > h1 {
+  color: #fff;
+}
+#main_header > a, #main_header > label
+{
+  position: absolute;
+  display: block;
+  height: 32px;
+}
+
+#main_header > a.left{
+  left: 5px; top: 7px;
+  width: 62px; height: 32px;
+  background: url('./img/header_left_button.png') -0, -0;
+}
+
+#main_header > label.right{
+  right: 5px; top: 7px;
+  width: 32px; height: 32px;
+  background: url('./img/header_right_button.png') -62px, -0;
+}
+
+/* 하단 토글박스 메뉴 */
+#toggle{
+  display: none;
+}
+#toggle + #wrap > #toggle_gnb_wrap {
+  display: none;
+}
+#toggle:checked + #wrap > #toggle_gnb_wrap {
+  display: block;
+}
+#toggle_gnb_wrap{
+  background-color: beige;
+  padding: 15px;
+}
+#toggle_gnb > ul > #toggle_top {
+  text-align: center;
+}
+#toggle_gnb > ul > #toggle_top> li {
+  display: inline-block;
+  width: 70px;
+}
+#toggle_gnb > ul > #toggle_bottom {
+  text-align: center;
+}
+#toggle_gnb > ul > #toggle_bottom> li {
+  display: inline-block;
+  width: 70px;
+}
+
+/* GNB메뉴_1 */
+#top_gnb {
+  overflow: hidden;
+  border: 1px solid black;
+  background-color: #b42111;
+  
+}
+#top_gnb > div > a {
+  float: left;
+  width: 25%; height: 35px;
+
+  text-align: center;
+  line-height: 35px;
+  color: white;
+}
+
+/* GNB메뉴_2 */
+#bottom_gnb {
+  width: 100%;
+  border: 1px solid black;
+  display: table;
+}
+#bottom_gnb > div {
+  display: table-cell;
+  position: relative;
+}
+#bottom_gnb > div > a {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+#bottom_gnb > div > a::before{
+  content: "";
+  width: 1px; height: 15px;
+  border-left: 1px solid black;
+  display: block;
+  position: absolute;
+  top: 9px; left: -3px;
+}
+
+/* 본문 스타일 */
+
+#section_header {
+  padding: 20px;
+}
+
+#section_article{
+  padding: 20px;
+}
+
+/* 푸터 */
+#main_footer {
+  text-align: center;
+  border: 3px solid black;
+  padding: 10px;
+}
