@@ -1,0 +1,746 @@
+
+
+1. 
+
+ul {
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+  float: left; padding: 15px;
+}
+
+li:nth-child(2n){
+  background-color: red;
+}
+
+li:nth-child(2n+1){
+  background-color: blue;
+}
+
+li:first-child{
+  border-radius: 10px 0 0 10px;
+}
+
+li:last-child{
+  border-radius: 0 10px 10px 0;
+}
+
+==
+
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+  </ul>
+</body>
+</html>
+
+--
+
+
+2. 
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <ul>
+    <li><a href="#">test</a></li>
+    <li><a href="#">test</a></li>
+    <li><a href="#">test</a></li>
+    <li><a href="#">test</a></li>
+    <li><a href="#">test</a></li>
+  </ul>
+</body>
+</html>
+
+--
+
+==
+
+li:first-child > a {
+  color: red
+}
+
+==
+
+
+3. 
+
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Header - 1</h1>
+  <h2>Header - 2</h2>
+  <h3>Header - 3</h3>
+  <h3>Header - 3</h3>
+  <h2>Header - 2</h2>
+  <h1>Header - 1</h1>
+</body>
+</html>
+
+--
+
+==
+
+h1:first-of-type{
+  color: red;
+}
+
+h2:first-of-type{
+  color: red;
+}
+
+h3:first-of-type{
+  color: red;
+}
+
+==
+
+
+
+4.
+
+--
+*구조선택자
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Header - 1</h1>
+  <h2>Header - 2</h2>
+  <h3>Header - 3</h3>
+  <h4>Header - 4</h4>
+  <h5>Header - 5</h5>
+  <h6>Header - 6</h6>
+  <h1>Header - 1</h1>
+  <h2>Header - 2</h2>
+  <h3>Header - 3</h3>
+  <h4>Header - 4</h4>
+  <h5>Header - 5</h5>
+  <h6>Header - 6</h6>
+</body>
+</html>
+
+--
+
+==
+
+body > *:first-of-type{
+  color: red;
+}
+
+==
+
+5. 문자선택자
+
+
+p::first-letter{
+  color: red; font-size: 3em;
+}
+
+p::first-line {
+background-color: blue;
+}
+
+==
+
+
+6. 전후문자선택자
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p data-page="52">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum esse sed debitis aliquam sit ut, porro velit aperiam aspernatur quae facere itaque adipisci nemo error vero harum assumenda? Tenetur, atque?</p>
+  <p data-page="273">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium eos molestias tempore qui ullam fugiat beatae quis assumenda explicabo voluptas distinctio, est quo corrupti iusto hic quia! Tempora, expedita natus.</p>
+</body>
+</html>
+
+--
+
+==
+
+p {
+  counter-increment: rint;
+}
+
+p::before{
+  content: counter(rint) ".";
+}
+
+p::after {
+  content: " - " attr(data-page) " page";
+}
+
+p::first-letter{
+  font-size: 3em;
+  }
+
+
+==
+
+
+
+7. 자바, 제이쿼리
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+  <ul data-role="listview">
+    <li data-role="list-divider">HTML5</li>
+    <li>Multimedia</li>
+    <li>Connectivity</li>
+    <li>Device Access</li>
+    <li data-role="list-divider">CSS3</li>
+    <li>Animation</li>
+    <li>3D Transition </li>
+  </ul>
+</body>
+</html>
+
+--
+
+
+8. 제이쿼리
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+  <div data-role="">
+  <div data-role="header" data-theme="b">
+    <h1>HTML5 & CSS3</h1>
+  </div>
+  <ul data-role="listview">
+    <li data-role="list-divider">HTML5</li>
+    <li>Multimedia</li>
+    <li>Connectivity</li>
+    <li>Device Access</li>
+    <li data-role="list-divider">CSS3</li>
+    <li>Animation</li>
+    <li>3D Transition</li>
+  </ul>
+</div>
+</body>
+</html>
+
+
+9.  반응문자선택자
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus dolor saepe id facilis quae quam cum, nam, cumque quaerat non soluta numquam vitae tempore possimus voluptatibus voluptatem sequi placeat repudiandae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus dolor saepe id facilis quae quam cum, nam, cumque quaerat non soluta numquam vitae tempore possimus voluptatibus voluptatem sequi placeat repudiandae?</p>
+</body>
+</html>
+
+--
+
+==
+
+p::selection{
+  background-color: black;
+  color: white
+}
+
+
+==
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+  <h1><a>Nothing</a></h1>
+  <h1><a href="https://www.nike.com">Nike</a></h1>
+  <h1><a href="https://www.adidas.com">Adidas</a></h1>
+</body>
+</html>
+
+
+10. 부정선택자
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<input type="password">
+<input type="text">
+<input type="password">
+<input type="text">
+</body>
+</html>
+
+=
+
+input:not([type=password]) {
+  background-color: red;
+}
+
+
+---
+
+https://validator.w3.org/
+
+---
+
+11. 우선순위
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="my-box">
+    <div class="text">my text 1</div>
+    <div class="text black">my text 2</div>
+    <div class="text important-black">my text 3</div>
+  </div>
+</body>
+</html>
+
+===
+
+#my-box .text {
+  color: blue;
+}
+
+.black {
+  color: red;
+}
+
+.important-black {
+  color: red !important
+}
+
+---
+
+vw/vh
+%
+em
+rem
+
+
+12. 단위
+
+* {
+ font-size: 30px;
+}
+
+div {
+  font-size: 20px;
+}
+
+p:nth-child(1) {
+}
+
+p:nth-child(2) {
+  font-size: 50px;
+}
+
+p:nth-child(3) {
+  font-size: 2em;
+}
+
+p:nth-child(4) {
+  font-size: 2rem;
+}
+==
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div>
+    <p>Lorem, ipsum dolor</p>
+    <p>Lorem, ipsum dolor</p>
+    <p>Lorem, ipsum dolor</p>
+    <p>Lorem, ipsum dolor</p>
+  </div>
+</body>
+</html>
+
+
+
+---
+
+13. 색상
+
+  <div>
+    <p class="text1">Lorem, ipsum dolor</p>
+    <p class="text2">Lorem, ipsum dolor</p>
+    <p class="text3">Lorem, ipsum dolor</p>
+    <p>Lorem, ipsum dolor</p>
+  </div>
+
+==
+
+p.text1 {
+  color: red;
+}
+
+p.text2 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+p.text3 {
+  color: #ffffff;
+}
+
+14. 디스플레이
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <span>Dummy</span>
+  <div id="box1">
+    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+  </div>
+  <span>Dummy</span>
+  <hr />
+  <span>Dummy</span>
+  <div id="box2">
+    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+  </div>
+  <span>Dummy</span>
+</body>
+</html>
+
+==
+
+#box1{
+  display: inline;
+  background-color: red;
+  width: 500px; height: 50px;
+  margin: 10px;
+}
+
+#box2{
+  display: inline-block;
+  background-color: red;
+  width: 500px; height: 50px;
+  margin: 10px;
+}
+
+--
+
+
+15. 색
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <span>Dummy</span>
+  <div id="box">
+    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+  </div>
+  <span>Dummy</span>
+</body>
+</html>
+
+==
+
+#box1{
+  background-color: black;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+16. 마진과 패딩
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div>박스</div>
+</body>
+</html>
+
+==
+
+div {
+  text-align: center;
+  line-height: 200px;
+  font-size: 20px;
+  font-weight: 900px;
+  color: white;
+
+
+  width: 200px; height: 200px;
+  background-color: red;
+
+  border: 20px solid black;
+  margin: 30px 40px 50px 60px; padding: 30px;
+}
+
+17. 마진과 패딩 2
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div></div>
+  <div></div>
+</body>
+</html>
+
+==
+
+div{
+  width: 100px; height: 100px;
+  border: 10px solid black;
+  margin: 10px; padding: 10px;
+}
+
+div:first-child{
+background-color: red;
+}
+
+div:last-child{
+  background-color: orange;
+  }
+
+
+
+18.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="box">
+    <h1 class="box">Lorem ipsum dolor, sit amet</h1>
+  </div>
+</body>
+</html>
+
+==
+
+.box{
+  width: 500px;
+  text-align: center;
+
+/* border-width: 1px; 
+  border-style: dashed;
+  border-color: aqua; */
+
+  border: 10px dashed red;
+  border-radius: 10px 20px 30px 40px;
+
+}
+
+12.
+
+body{
+  background-image: url('./img/BackgroundFront.png'), url('./img/BackgroundBack.png');
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: bottom;
+background-attachment: fixed;
+}
+==
+#wrap {
+  width: 100vw; height: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+#wrap::before {
+  content: "";
+  background-image: url(./img/BackgroundFront.png), url('./img/BackgroundFront.png');
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+  opacity: 0.4;
+}
+
+#wrap > h1, #wrap > p {
+  position: relative;
+}
+
+
+----
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="wrap">
+  <h1>Lorem, ipsum dolor sit</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti recusandae autem blanditiis quisquam eligendi reiciendis, eaque eveniet expedita tempora commodi, deserunt, esse provident cupiditate voluptates praesentium placeat minima obcaecati.</p>
+</div>
+</body>
+</html>
+
+
+
