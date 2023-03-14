@@ -1,0 +1,13 @@
+.contain .catagory
+	.catagory-inner
+		.main header
+			[same html structure]
+		.catagory content
+			.cartegory-accodian
+				.title, button * 5
+					.ul.detail > (li > a) * 5
+		.gnb
+			[same html structure]
+		
+			
+		

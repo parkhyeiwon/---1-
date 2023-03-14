@@ -1,0 +1,46 @@
+/* Import Local CSS */
+@import url('/css/reset.css');
+@import url('/css/veriable.css');
+
+/* Common CSS */
+* {
+  font-family: var(--primary-kr);
+}
+body {
+  margin: 0;
+  color: var(--dark-black);
+  font-size: 14px;
+}
+
+/* Layout CSS */
+.container {
+  width: 375px;
+  position: relative;
+}
+
+/* Preloading Html */
+.preloading {
+  height: 100vh;
+}
+.preloading-inner {
+  height: inherit;
+  background: url('/img/01-Preloading-01.jpg') no-repeat 
+  -110px center;
+  background-size: cover;
+}
+.heading-preloading-inner {
+  position: absolute;
+  top: 80px; left: 30px;
+}
+.heading-preloading-inner .logo{
+  font-size: 32px;
+  font-family: var(--logo-en);
+  color: var(--crimson);
+}
+.slogan span {
+  display: block;
+  font-family: var(--second-kr);
+  margin-top: 14px;
+  font-weight: bold;
+  font-size: 28px;
+}
