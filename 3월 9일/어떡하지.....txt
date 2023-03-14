@@ -1,0 +1,155 @@
+0.
+
+header {
+  width: 800px;
+  margin: 0 auto;
+
+  hgroup{
+    h1 {
+      color: red;
+    }
+
+    h2{
+      color: blue;
+    }
+  }
+
+  nav {
+    ul {
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+    
+  }
+}
+
+
+1.
+
+div {
+  height: 10px;
+}
+
+div:nth-child(1) {
+  background: darken(@color, 0%);
+}
+div:nth-child(2) {
+  background: darken(@color, 10%);
+}
+div:nth-child(3) {
+  background: darken(@color, 20%);
+}
+div:nth-child(4) {
+  background: darken(@color, 30%);
+}
+div:nth-child(5) {
+  background: darken(@color, 40%);
+}
+div:nth-child(6) {
+  background: darken(@color, 50%);
+}
+
+
+
+2. 부트스트랩 https://getbootstrap.kr/
+
+3. 태그에 이미지x
+
+4. 그리드
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--Less Style-->
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+  <!--Custom style-->
+  <link rel="stylesheet" href="./css/그리드.css">
+</head>
+<body>
+  <div class=container> 
+    <div class="row">
+      <div class="span_12">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+      </div>
+    </div>
+  <div class=row> 
+    <div class="span_6">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+    </div>
+    <div class="span_6">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+    </div> 
+  </div>
+  <div class=row> 
+    <div class="span_4">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+    </div>
+    <div class="span_4"><h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+    </div>
+    <div class="span_4">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+    </div>
+  </div>
+  <div class=row> 
+    <div class="span_3"><h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p></div>
+    <div class="span_3"><h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p></div>
+    <div class="span_3"><h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p></div>
+    <div class="span_3"><h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis temporibus quia ipsum. Rem, unde vitae quia quidem aspernatur consequuntur ipsam quas repellat a, ad sint ullam deleniti mollitia pariatur.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+5. 그리드
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr 5fr;
+      grid-gap: 10px;
+    }
+    [class*=cell] {
+      box-sizing: border-box;
+      border : 5px solid black;
+      border-radius: 10px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cell-a">cell a</div>
+    <div class="cell-b">cell b</div>
+    <div class="cell-c">cell c</div>
+    <div class="cell-d">cell d</div>
+  </div>
+</body>
+</html>

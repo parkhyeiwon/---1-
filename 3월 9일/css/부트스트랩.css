@@ -1,0 +1,11 @@
+body {
+  padding-top: 70px;
+}
+.box {
+  padding-top: 20px;
+}
+
+.card {
+  background-color: blueviolet;
+  font-style: italic;
+}

@@ -1,0 +1,47 @@
+*{
+  margin: 0; padding: 0;
+}
+body {
+box-sizing: border-box;  
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+
+body {
+  background-color: rgb(218, 218, 218);
+}
+
+
+#Bbox{
+  background-color: rgb(92, 43, 137);
+  border-radius: 5px;
+  width: 50px;
+  
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}
+
+#smallbox {
+  width: 250px;
+  height: 50px;
+  border: 1px;
+  border-radius: 3px;
+  
+}
+
+#signin {
+  background-color: rgb(44, 44, 187);
+  border-radius: 8px;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+
+  text-align: center;
+  color: white;
+}
