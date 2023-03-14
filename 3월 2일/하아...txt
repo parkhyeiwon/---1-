@@ -1,0 +1,740 @@
+
+
+
+1. table - tr(행) - td(열)
+>border
+*table>(tr>td*3)*3
+
+>공부
+
+2. link rel="stylesheet" href="./style.css"
+
+3. ol ul
+
+4. g
+
+--------------------------------------------------------------
+
+<body>
+  <table>
+    <tr>
+      <td>hgeader1</td>
+      <td>hgeader2</td>
+    </tr>
+    <tr>
+      <td>data 1</td>
+      <td>data 1</td>
+    </tr>
+    <tr>
+      <td>data 2</td>
+      <td>data 2</td>
+    </tr>
+  </table>
+
+----------------
+
+@import url('./table.css');
+
+table, th, td{
+  border: 1px solid black;
+}
+
+----------------
+
+table, th, td{
+  border: 1px solid black;
+}
+
+th{
+  padding: 15px;
+}
+
+tr >td:nth-child(even) {
+  width: 300px;
+}
+
+---------------
+
+  <table>
+    <tr>
+      <th>이름</th>
+      <td></td>
+      <th>연락처</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>주소</th>
+      <td colspan="3"></td>
+    </tr>
+    <tr>
+      <th>자기소개</th>
+      <td colspan="3"></td>
+    </tr>
+  </table>
+
+---------------
+
+<table>
+    <caption>table caption</caption>
+    <colgroup>
+      <col span="2" style="background: red;"
+    </colgroup>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+  </table>
+
+-------------
+
+table, th, td{
+  border: 1px solid black;
+}
+
+
+--------------
+
+
+<body>
+  <table>
+    <caption>table caption</caption>
+    <colgroup>
+      <col span="2" style="background: red;"
+    </colgroup>
+    <tr>
+      <th>브라우저</th>
+      <th>주소</th>
+      <th>제조사</th>
+    </tr>
+    <tr>
+      <td>크롬</td>
+      <td>크롬 어쩌구</td>
+      <td>크롬 회사</td>
+    </tr>
+    <tr>
+      <td>엣지</td>
+      <td>엣지 어쩌구</td>
+      <td>엣지 회사</td>
+    </tr>
+    <tr>
+      <td>사파리</td>
+      <td>사파리 어쩌구</td>
+      <td>사파리 회사</td>
+    </tr>
+  </table>
+
+
+-------------
+
+rowspan
+
+span
+
+
+--------------
+
+
+<body>
+<table>
+  <colgroup>
+    <col span="1" style="background: gray;"> 
+    <col span="1">
+    <col span="1" style="background: gray;">
+    <col span="1">
+    <col span="1" style="background: gray;">
+  </colgroup>
+
+---
+
+<table>
+  <colgroup>
+    <col span="1" style="background: gray;"> 
+    <col span="1">
+    <col span="1" style="background: gray;">
+    <col span="1">
+    <col span="1" style="background: gray;">
+  </colgroup>
+  <tr>
+    <th colspan="6">한국의 차</th>
+  </tr>
+  <tr>
+    <th rowspan="6">뿌리차</th>
+    <td>인삼차</td>
+    <td rowspan="9">과일차</td>
+    <td>수정과</td>
+    <td rowspan="5">잎차</td>
+    <td>뽕잎차</td>
+  </tr>
+  <tr>
+
+    <td>당귀차</td>
+    <td>유자차</td>
+    <td>감잎차</td>
+  </tr>
+  <tr>
+    <td>생강차</td>
+    <td>구기자차</td>
+    <td>솔잎차</td>
+  </tr>
+  <tr>
+    <td>칡차</td>
+    <td>대추차</td>
+    <td>국화차</td>
+  </tr>
+  <tr>
+    <td>둥굴레차</td>
+    <td>오미자차</td>
+    <td>이슬차</td>
+  </tr>
+  <tr>
+    <td>마차</td>
+    <td>매실차</td>
+    <td rowspan="4">기타차</td>
+    <td>두충차</td>
+  </tr>
+  <tr>
+    <td rowspan="3">곡물차</td>
+    <td>보리차</td>
+    <td>모과차</td>
+    <td>영지버섯차</td>
+  </tr>
+  <tr>
+    <td>옥수수차</td>
+    <td>산수유차</td>
+    <td>귤강차</td>
+  </tr>
+  <tr>
+    <td>현미차</td>
+    <td>탕자차</td>
+    <td>쌍화차</td>
+  </tr>
+</table>
+
+---
+
+table, th, td{
+  border: 1px solid black
+}
+
+table{
+  width: 600px;height: 300px;
+  margin-left: 10px; auto
+  border-collapse: collapse;
+}
+
+table > tbody > tr > td {
+  text-align: center;
+}
+
+table > thead > tr > th {
+  padding: 10px;
+  color: brown
+}
+
+  table > thead > tr > td {
+    padding: 14px;
+}
+
+----
+
+
+
+  <form action="" method="post">
+    <input type="text" name="search"/>
+    <input type="submit" value="검색하기"/>
+
+
+----
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+  <form action="">
+    <input type="text"><br />
+    <input type="button" value="제출하기"><br />
+    <input type="checkbox"><br />
+    <input type="file"><br />
+    <input type="hidden"><br />
+    <input type="image"><br />
+    <input type="password"><br />
+    <input type="radio"><br />
+    <input type="reset" value="초기화 하시겠습니까?"><br />
+    <input type="submit" value="제출하세요"><br />
+  </form>
+</body>
+</html>
+
+------------
+
+  <div id="nike">
+    <img src="./img/nike.jpg" alt="nike" usemap="#event">
+    <map name="event">
+      <area shape="rect" coords="556,786,1178,874" href="http://www.nike.com" alt="nike" target="_blank">
+      <area target="_blank" alt="shopping" title="shopping" href="https://shopping.naver.com/home" coords="354,186,180,6" shape="rect">
+      <area shape="circle" coords="875,289,70" href="" alt="">
+    </map>
+    </map>
+  </div>
+  </form>
+
+
+---
+
+인풋과 라벨
+
+---
+    <fieldset>
+      <legend>입력양식</legend>
+      <table>
+        <tr>
+          <td><label for="id">아이디:</label></td>
+          <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+          <td><label for="pw">패스워드:</label></td>
+          <td><input type="pw" id="pw"></td>
+        </tr>
+      </table>
+      <input type="submit">
+    </form>
+    </fieldset>
+
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+  <form action="">
+  <hr />
+  <fieldset id="service">
+    <legend><strong>학사정보 조회서비스</strong></legend>
+    <div id="wrap">
+  <table>
+  <tr>
+    <td><label for="id"><span class="title">이름</span></label></td>
+    <td><input type="text" id="id"></td>
+  </tr>
+  <tr>
+    <td><label for="number"><span class="title">학번</span></label></td>
+    <td><input type="text" id="number"></td>
+  </tr>
+  <tr>
+    <td><label for="section"><span class="title">학과</span></label></td>
+    <td><input type="text" id="section"></td>
+  </tr>
+</table>
+</div>
+</fieldset>
+<div id="btn">
+<button>조회하기</button>
+<button>제출하기</button>
+</div>
+</form>
+</body>
+</html>
+
+--
+
+body{
+  width: 500px;
+  margin: 10px auto;
+}
+
+fieldset{
+  width: 250px;
+  background-color: antiquewhite;
+}
+
+#wrap{
+  width: 240px;
+  text-align: center;
+}
+
+legend{
+  text-align: center;
+}
+
+.title{
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+#btn{
+  width: 250px;
+  text-align: center;
+  margin-top: 12px;
+  padding: 5px 10px;
+}
+
+button{
+  padding: 5px 10px;
+  margin: 8px;
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+  <form action="">
+<fieldset>
+  <legend><strong>신청과목</strong></legend>
+<div>
+  <p>이 달에 신청할 과목을 선택하세요!(1과목만 선택가능)</p>
+  <label for="a"><input type="radio" id="a" name="sub">회화</label>
+  <label for="b"><input type="radio" id="b" name="sub" checked>문법</label>
+  <label for="c"><input type="radio"  id="c" name="sub">작문</label>
+</div>
+</fieldset>
+<fieldset id="second">
+  <legend><strong>메일링</strong></legend>
+<div>
+  <p>메일로 받고 싶은 주제를 선택해 주세요(*복수 선택 가능)</p>
+  <label for="d"><input type="checkbox" id="d" name="sub">회화</label>
+  <label for="e"><input type="checkbox" id="e" name="sub">문법</label>
+  <label for="f"><input type="checkbox" id="f" name="sub" checked>작문</label>
+</div>
+</fieldset>
+<div>
+  <p>학번 : <input type="text" value="20160097"></p><br />
+  <p>이름 : <input type="text" autofocus="on"></p>
+</div>
+</form>
+</body>
+</html>
+
+----
+
+label{
+  margin-right: 20px;
+}
+#second{
+  margin-top: 20px;
+}
+
+---
+
+  <select name="food" id="food" multiple="multiple">
+    <option value="">김밥</option>
+    <option value="">떡볶이</option>
+    <option value="">순대</option>
+    <option value="">오뎅</option>
+  </select>
+
+---
+
+<select name="" id="">
+  <optgroup label="HTML5">
+    <option value="">tag</option>
+    <option value="">connect</option>
+    <option value="">device</option>
+  </optgroup>
+  <optgroup label="Css3">
+    <option value="">admin</option>
+    <option value="">3d</option>
+    <option value="">트랜스폼</option>
+  </optgroup>
+</select>
+
+---
+
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <hr />
+  <span class="text">Lorem ipsum</span>
+  <span>Lorem ipsum</span>
+  <span>Lorem ipsum</span>
+  <span>Lorem ipsum</span>
+  <span class="inline">Lorem ipsum</span>
+  <span class="inline">Lorem ipsum</span>
+
+---
+
+.inline{
+  display: inline-block;
+  width: 500px;
+  text-align: center;
+}
+
+.text{
+  width: 500px;
+  text-align: center;
+}
+
+--
+section>(article>h1+p)*2
+
+---
+
+<header>
+  <h1>HTML5 Header</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="#">Menu - 1</a></li>
+    <li><a href="#">Menu - 2</a></li>
+    <li><a href="#">Menu - 3</a></li>
+  </ul>
+</nav>
+<section>
+  <aticle>
+    <h1>로렘1</h1>
+    <p>어쩌구</p>
+  </aticle>
+  <aticle>
+    <h1>로렘</h1>
+    <p>어쩌구</p>
+  </aticle>
+  서울시 종로구 그린미디어 아카데미
+</section>
+
+-----
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+<header>
+  <h1>Header</h1>
+</header>
+<div id="wrap">
+<aside>
+  <h1>Aside</h1>
+</aside>
+<section>
+  <h1>Section</h1>
+</section>
+</div>
+</body>
+</html>
+
+----
+
+header{
+  background-color: red;
+  width: 800px; margin: 0 auto;
+}
+
+#wrap{
+  overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+}
+
+aside{
+  background-color: blue;
+  width: 200px; float: left;
+}
+
+section {
+  background-color: green;
+  width: 600px; float: left;
+}
+
+---
+
+https://www.image-map.net/
+
+--
+
+h1 {
+  color: red;
+}
+h1,h2{
+  text-align: center;
+}
+p{
+  color: blue;
+}
+
+.main {
+  color: red;
+}
+
+.item1{
+  font-size: large;
+}
+
+.item2{
+  font-size: 30px;
+}
+
+
+#sub{
+  color: blue;
+  font-weight: 900;
+}
+
+---
+
+  <ul>
+    <li class="main item1">Lorem ipsum dolor sit</li>
+    <li>Lorem ipsum dolor sit</li>
+    <li class="main item2">Lorem ipsum dolor sit</li>
+    <li id="sub">Lorem ipsum dolor sit</li>
+  </ul>
+
+---
+
+input[type=text]{
+  background-color: red;
+}
+
+input[type=password]{
+  background-color: blue;
+}
+
+--
+
+ <img src="./img/아이유.jpg" alt="아이유" width="200px">
+</form>
+
+-----
+
+img[src$=jpg]{
+  border: 2px
+  solide blue;
+}
+
+---
+
+div>h1+h2+ul>li*3
+
+---
+
+
+  <div id="header">
+    <h1>Lorem ipsum</h1>
+    <div id="nav">
+      <h2>Navigation</h2>
+    </div>
+  <div id="section">
+    <h1>Lorem ipsum </h1>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+
+----
+
+table>(tr>th*2)+tr>td*2
+
+
+
+h1:hover{
+  color: red;
+}
+
+h1:active{
+  color: blue;
+}
+
+---
+
+input[type=checkbox]:checked + div {
+  height: 0px;
+}
+
+div {
+overflow: hidden;
+width: 650; height: 300px;
+transition-duration: 1s;
+}
+
+
+--
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+  <input type="checkbox">
+  <div>
+    <h1>Lorem, ipsum</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius at commodi, labore non explicabo rerum obcaecati fugiat. Dignissimos perspiciatis dolores nisi ex, nobis molestias ducimus doloribus! Obcaecati mollitia accusamus ducimus.</p>
+  </div>
+</body>
+</html>
+
+---
+
+input[type=checkbox]:checked + div {
+  height: 0px;
+}
+
+div {
+overflow: hidden;
+width: 650; height: 300px;
+transition-duration: 1s;
+}
+
+----
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+  <input type="checkbox">
+  <div>
+    <h1>Lorem, ipsum</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius at commodi, labore non explicabo rerum obcaecati fugiat. Dignissimos perspiciatis dolores nisi ex, nobis molestias ducimus doloribus! Obcaecati mollitia accusamus ducimus.</p>
+  </div>
+</body>
+</html>
