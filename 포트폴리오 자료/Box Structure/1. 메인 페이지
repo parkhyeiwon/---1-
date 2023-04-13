@@ -1,0 +1,5 @@
+	.container
+		.maintext
+			h1
+	.gnb
+		input type=radio
