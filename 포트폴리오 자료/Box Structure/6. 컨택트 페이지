@@ -1,0 +1,9 @@
+	.contact-page
+		.contact-inner
+			img .manyleaf
+			h1 .contact
+			.contact-box
+				(input type=text>label)*2
+				input type=textarea>label
+				button
+			.gnb

@@ -1,0 +1,11 @@
+	.container
+		.inner
+			.pro-title
+				h1 .profile
+			.pro-image
+				img
+			.pro-desc_left
+				p
+			.pro-desc_right
+		.gnb
+			same html structur

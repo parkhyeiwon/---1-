@@ -1,0 +1,31 @@
+	.webwork-page
+		.webwork-inner
+			h1 .webwork
+			.webwork-group
+				.group_a
+					i .pin_p
+					.paper_a
+				.group_b
+					.b-tape_t
+					.b-tape_b
+					.paper_b
+				.group_c
+					.c-tape_l
+					.c-tape_c
+					.c-tape_r
+					.paper_c
+				.group_d
+					.d-tape_l
+					.d-tape_r
+					.paper_d
+				.group_e
+					.e-tape_t
+					.e-tape_b
+					.paper_e
+				.group_f
+					i .pin_b
+					.paper_f
+		.gnb
+			same html structer
+				
+	

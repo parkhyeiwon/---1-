@@ -1,0 +1,6 @@
+	.main-page
+		.main-inner
+			.main-text
+				h1 .main
+		.gnb
+			input type=radio

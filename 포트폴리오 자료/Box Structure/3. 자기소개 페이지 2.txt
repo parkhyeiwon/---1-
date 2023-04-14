@@ -1,0 +1,9 @@
+	.profile_two-page
+		i .leaf-blue_green
+		i .leaf-pea_green
+		i .leaf-green 	
+		.profile_two-inner
+			.center-box
+		.gnb
+			same html structur
+		
